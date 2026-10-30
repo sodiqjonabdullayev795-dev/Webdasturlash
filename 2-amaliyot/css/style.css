@@ -1,0 +1,232 @@
+/* Asosiy ranglar palitrasi */
+:root {
+    --asosiy: #1f3a5f;
+    --ikkinchi: #2f6b8a;
+    --fon: #f3f6f8;
+    --matn: #263238;
+}
+
+/* Umumiy sahifa uslublari */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fon);
+    color: var(--matn);
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Sarlavhalar */
+.site-header {
+    background-color: var(--asosiy);
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    margin: 0;
+    padding-top: 18px;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #f2c14e;
+}
+
+.slogan {
+    margin-top: 0;
+    font-style: italic;
+}
+
+h1 {
+    color: var(--asosiy);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2, h3 {
+    color: var(--ikkinchi);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 19px;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Navigatsiya havolalari */
+.nav-list {
+    padding: 0 0 18px;
+    list-style: none;
+}
+
+.nav-list li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+nav a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #f2c14e;
+    text-decoration: underline;
+}
+
+/* Asosiy mazmun */
+main {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.intro, main section {
+    margin-bottom: 28px;
+}
+
+.intro {
+    background-color: white;
+    padding: 18px;
+    border-radius: 8px;
+}
+
+.car-card {
+    background-color: white;
+    margin: 16px 0;
+    padding: 12px 18px;
+    border-left: 5px solid var(--ikkinchi);
+    border-radius: 6px;
+}
+
+.car-card h3 {
+    margin-top: 0;
+}
+
+.price {
+    color: var(--asosiy);
+    font-weight: 700;
+}
+
+.term {
+    color: var(--asosiy);
+    font-weight: 700;
+}
+
+dd {
+    margin-bottom: 12px;
+}
+
+blockquote {
+    margin: 18px 0;
+    padding: 12px 18px;
+    background-color: rgba(47, 107, 138, 0.12);
+    border-left: 4px solid var(--ikkinchi);
+    font-style: italic;
+}
+
+mark {
+    background-color: #f2c14e;
+    color: #263238;
+}
+
+.notice {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.small-note {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.izoh {
+    color: var(--ikkinchi);
+}
+
+/* Havolalar holati */
+a {
+    color: #1f5f83;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #5b477a;
+}
+
+a:hover {
+    color: #b36b00;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    color: #f2c14e;
+}
+
+.top-link {
+    text-align: right;
+    font-weight: 700;
+}
+
+/* Aloqa va pastki qism */
+#aloqa {
+    background-color: rgba(47, 107, 138, 0.10);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.site-footer {
+    background-color: var(--asosiy);
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Kichik ekranlar uchun sodda moslashuv */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    .nav-list li {
+        display: block;
+        margin: 6px 0;
+    }
+
+    .container {
+        width: 92%;
+    }
+}

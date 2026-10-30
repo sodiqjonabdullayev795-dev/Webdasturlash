@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AvtoTop: avtomobilni ko'rish uchun ariza formasi va aloqa ma'lumotlari.">
+    <title>Aloqa — AvtoTop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header" id="yuqori">
+        <div class="container header-inner">
+            <div class="brand">
+                <p class="logo">Avto<span>Top</span></p>
+                <p class="slogan">Avtomobil tanlash — oson va qulay!</p>
+            </div>
+            <nav aria-label="Asosiy navigatsiya">
+                <ul class="nav-list">
+                    <li><a href="index.html">Bosh sahifa</a></li>
+                    <li><a href="batafsil.html">Batafsil</a></li>
+                    <li><a href="aloqa.html" aria-current="page">Aloqa</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="layout">
+            <div class="content">
+                <section class="intro">
+                    <h1>Aloqa va ariza</h1>
+                    <p>Qiziqqan avtomobilingizni ko'rish uchun quyidagi formani to'ldiring. <span class="req">*</span> belgisi majburiy maydonlarni bildiradi.</p>
+                </section>
+
+                <section id="ariza">
+                    <h2>Avtomobilni ko'rish uchun ariza</h2>
+                    <article class="card">
+                        <form class="form" method="post">
+                            <div class="form-row">
+                                <div class="field">
+                                    <label for="ism">Ism-familiya <span class="req">*</span></label>
+                                    <input type="text" id="ism" name="ism" placeholder="Masalan, Aliyev Vali" autocomplete="name" required>
+                                </div>
+                                <div class="field">
+                                    <label for="email">Elektron pochta <span class="req">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="vali@example.com" autocomplete="email" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field">
+                                    <label for="tel">Telefon raqam <span class="req">*</span></label>
+                                    <input type="tel" id="tel" name="telefon" placeholder="+998901234567" pattern="\+998[0-9]{9}" title="Raqam +998 bilan boshlanib, undan keyin 9 ta raqam bo'lishi kerak. Masalan: +998901234567" autocomplete="tel" required>
+                                </div>
+                                <div class="field">
+                                    <label for="model">Qiziqqan avtomobil <span class="req">*</span></label>
+                                    <select id="model" name="model" required>
+                                        <option value="">Tanlang...</option>
+                                        <optgroup label="Sedan">
+                                            <option value="cobalt">Chevrolet Cobalt</option>
+                                            <option value="nexia3">Chevrolet Nexia 3</option>
+                                            <option value="gentra">Chevrolet Gentra</option>
+                                        </optgroup>
+                                        <optgroup label="Krossover">
+                                            <option value="tracker">Chevrolet Tracker</option>
+                                            <option value="captiva5">Chevrolet Captiva 5</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="field">
+                                    <label for="byudjet">Byudjet (mln so'm)</label>
+                                    <input type="number" id="byudjet" name="byudjet" min="50" max="500" step="5" placeholder="Masalan, 150">
+                                </div>
+                                <div class="field">
+                                    <label for="sana">Ko'rish uchun qulay sana</label>
+                                    <input type="date" id="sana" name="sana" min="2026-11-01">
+                                </div>
+                            </div>
+
+                            <fieldset>
+                                <legend>Bog'lanish usuli</legend>
+                                <div class="choices">
+                                    <div class="choice">
+                                        <input type="radio" id="usul-tel" name="usul" value="telefon" checked>
+                                        <label for="usul-tel">Telefon qo'ng'irog'i</label>
+                                    </div>
+                                    <div class="choice">
+                                        <input type="radio" id="usul-sms" name="usul" value="sms">
+                                        <label for="usul-sms">SMS</label>
+                                    </div>
+                                    <div class="choice">
+                                        <input type="radio" id="usul-email" name="usul" value="email">
+                                        <label for="usul-email">Elektron pochta</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Qo'shimcha xizmatlar</legend>
+                                <div class="choices">
+                                    <div class="choice">
+                                        <input type="checkbox" id="xizmat-tekshiruv" name="xizmat" value="texnik-tekshiruv">
+                                        <label for="xizmat-tekshiruv">Texnik tekshiruv</label>
+                                    </div>
+                                    <div class="choice">
+                                        <input type="checkbox" id="xizmat-hujjat" name="xizmat" value="hujjat-tekshiruv">
+                                        <label for="xizmat-hujjat">Hujjatlarni tekshirish</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="field">
+                                <label for="izoh">Qo'shimcha izoh</label>
+                                <textarea id="izoh" name="izoh" rows="4" placeholder="Masalan, avtomatik uzatmalar qutisi kerak"></textarea>
+                            </div>
+
+                            <div class="choice">
+                                <input type="checkbox" id="rozilik" name="rozilik" value="ha" required>
+                                <label for="rozilik">Ma'lumotlarim ariza ko'rib chiqilishi uchun ishlatilishiga roziman <span class="req">*</span></label>
+                            </div>
+
+                            <div>
+                                <button class="btn btn-dark" type="submit">Ariza yuborish</button>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+
+                <section id="xarita">
+                    <h2>Biz qayerdamiz</h2>
+                    <iframe class="map" title="Urganch shahri xaritasi (Google Maps)" src="https://www.google.com/maps?q=Urganch&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+            </div>
+
+            <aside>
+                <section class="card side-card">
+                    <h2>Aloqa ma'lumotlari</h2>
+                    <p><a href="mailto:avtotop@example.com">avtotop@example.com</a></p>
+                    <p><a href="tel:+998900000000">+998 90 000 00 00</a> <span class="small-note">(namunaviy raqam)</span></p>
+                    <p>Urganch shahri, Xorazm viloyati</p>
+                </section>
+                <section class="card side-card">
+                    <h2>Ish vaqti</h2>
+                    <ul>
+                        <li>Dushanba – Juma: 09:00 – 18:00</li>
+                        <li>Shanba: 09:00 – 14:00</li>
+                        <li>Yakshanba: dam olish kuni</li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-col">
+                <h2>AvtoTop</h2>
+                <p>Avtomobil e'lonlari haqida o'quv loyihasi.</p>
+                <p>© 2026 AvtoTop — HTML5 va CSS3 amaliy loyiha.</p>
+            </div>
+            <div class="footer-col">
+                <h2>Aloqa</h2>
+                <p><a href="mailto:avtotop@example.com">avtotop@example.com</a></p>
+                <p><a href="tel:+998900000000">+998 90 000 00 00</a> <span class="small-note">(namunaviy raqam)</span></p>
+                <p>Urganch shahri, Xorazm viloyati</p>
+            </div>
+        </div>
+    </footer>
+
+    <a class="to-top" href="#yuqori">↑ Yuqoriga</a>
+</body>
+</html>
